@@ -8,23 +8,22 @@
 </head>
 <body>
     <div class="chat-container">
-        <div class="user-chatbox">
-            <img src="./image/user_icon.png" alt="user-image" id="user-image" class="img">
-            <div class="user-chat-area">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis inventore quia a, laborum illo voluptatibus aut delectus natus error molestias illum repellat odit tenetur voluptatem?
-            </div>
-        </div>
         <div class="ai-chatbox">
             <img src="./image/ai_chatbot_icon.png" alt="AI-image" id="ai-image" class="img">
             <div class="ai-chat-area">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo architecto non consequatur, quisquam voluptate quo repellat magnam excepturi asperiores rerum, facere molestiae odio tempore fuga. Soluta, possimus. Aut, deleniti saepe.
+                Hello! How can I help you today?
             </div>
         </div>
     </div>
     <div class="prompt-area">
         <input type="text" id="prompt" placeholder="Message...">
-        <button id="image"><img src="./image/image icon.png" alt="" id="image-icon"></button>
-        <button id="submit"><img src="./image/upload icon2.png" alt=""></button>
+        <button id="image">
+            <img src="./image/image icon.png" alt="" id="image-icon">
+            <input type="file" id="image-input" accept="image/*" hidden>
+        </button>
+        <button id="submit">
+            <img src="./image/upload icon2.png" alt="">
+        </button>
     </div>
     <script src="./script.js"></script>
 </body>
