@@ -20,14 +20,15 @@ body {
     height: 80vh;
     width: 90vw;
     max-width: 800px;
+    margin-bottom: 2px;
     padding: 10px;
     background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
     border-radius: 15px;
-    box-shadow: 5px 5px 15px #0d0d0d, -5px -5px 15px #2a2a2a;
+    /* box-shadow: 5px 5px 15px #0d0d0d, -5px -5px 15px #2a2a2a; */
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-size: 18px;
+    font-size: 30px;
     overflow: auto;
 }
 .user-chatbox, .ai-chatbox {
@@ -47,11 +48,11 @@ body {
     padding: 15px 20px;
     border-radius: 20px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    font-size: 16px;
+    font-size: 22px;
     word-wrap: break-word;
 }
 .user-chat-area {
-    background-color: #007AFF;
+    background-color: #050b0fd7;
     color: #ffffff;
     border-radius: 20px 20px 0px 20px;
     display: flex;
@@ -90,19 +91,20 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    gap: 10px;
+    gap: 15px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 .prompt-area input {
     flex: 1;
     height: 45px;
+    width: 70%;
     background-color: #2a2a2a;
     padding: 10px;
     outline: none;
     border: none;
     border-radius: 25px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 25px;
     box-shadow: inset 2px 2px 5px #0d0d0d, inset -2px -2px 5px #2a2a2a;
     transition: all 0.3s;
 }
@@ -114,7 +116,7 @@ body {
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background: linear-gradient(145deg, #007AFF, #005FCC);
+    background: linear-gradient(145deg, #0b0d10, #010c19);
     border: none;
     cursor: pointer;
     display: flex;
@@ -127,78 +129,77 @@ body {
     background: linear-gradient(145deg, #005FCC, #003E99);
 }
 .choose {
-    width: 100%;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .chat-container {
-        height: 75vh;
-        width: 95vw;
-        font-size: 16px;
-        gap: 10px;
+        height: 80vh;
+        width: 90vw;
+        gap: 5px;
+        margin-bottom: 5px;
     }
     .user-chatbox, .ai-chatbox {
-        max-width: 90%;
-        padding: 8px;
-        font-size: 14px;
+        max-width: 85%;
+        padding: 5px;
     }
     .user-chat-area, .ai-chat-area {
         padding: 10px 15px;
-        font-size: 14px;
     }
     #user-image, #ai-image {
-        width: 35px;
-        height: 35px;
+        width: 42px;
+        height: 42px;
     }
     .prompt-area {
         height: 10vh;
-        width: 95vw;
-        gap: 8px;
-        padding: 8px;
+        width: 90vw;
+        gap: 5px;
+        padding: 5px;
     }
     .prompt-area input {
-        height: 40px;
-        font-size: 14px;
+        height: 45px;
+        font-size: 22px;
     }
     .prompt-area button {
-        height: 40px;
-        width: 40px;
+        height: 45px;
+        width: 45px;
     }
 }
 
 @media (max-width: 480px) {
     .chat-container {
-        height: 70vh;
-        width: 100vw;
-        font-size: 14px;
-        gap: 8px;
+        height: 80vh;
+        width: 90vw;
+        gap: 5px;
+        margin-bottom: 5px;
     }
     .user-chatbox, .ai-chatbox {
-        max-width: 95%;
-        padding: 6px;
-        font-size: 12px;
+        max-width: 92%;
+        padding: 5px;
     }
     .user-chat-area, .ai-chat-area {
         padding: 8px 12px;
-        font-size: 12px;
+        font-size: 20px;
     }
     #user-image, #ai-image {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
     .prompt-area {
-        height: 9vh;
-        width: 100vw;
+        height: 10vh;
+        width: 90vw;
         gap: 5px;
         padding: 5px;
     }
     .prompt-area input {
-        height: 35px;
-        font-size: 12px;
+        height: 45px;
+        font-size: 20px;
     }
     .prompt-area button {
-        height: 35px;
-        width: 35px;
+        height: 45px;
+        width: 45px;
     }
 }
