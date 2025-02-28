@@ -155,18 +155,18 @@ body {
         height: 55px;
     }
     .prompt-area {
-        height: 8vh;
-        width: 90vw;
+        height: 50px;
+        width: 95vw;
         gap: 5px;
         padding: 5px;
     }
     .prompt-area input {
-        height: 6px;
+        height: 30px;
         font-size: 25px;
     }
     .prompt-area button {
-        height: 7vh;
-        width: 7vh;
+        height: 40px;
+        width: 40px;
     }
 }
 
@@ -190,17 +190,17 @@ body {
         height: 50px;
     }
     .prompt-area {
-        height: 8vh;
-        width: 90vw;
+        height: 50px;
+        width: 95vw;
         gap: 5px;
         padding: 5px;
     }
     .prompt-area input {
-        height: 6vh;
+        height: 30px;
         font-size: 25px;
     }
     .prompt-area button {
-        height: 7vh;
-        width: 7vh;
+        height: 40px;
+        width: 40px;
     }
 }
