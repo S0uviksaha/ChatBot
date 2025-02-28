@@ -56,6 +56,8 @@ body {
     border-radius: 20px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     font-size: 25px;
+    display: flex;
+    flex-direction: column-reverse;
     word-wrap: break-word;
     max-width: 100%;
 }
@@ -79,6 +81,13 @@ body {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-image{
+    height: 40%;
+    width: 40%;
+    border-radius: 30px;
+    margin-bottom: 5px;
 }
 
 .loading {
