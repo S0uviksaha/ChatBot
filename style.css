@@ -81,6 +81,12 @@ body {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+.loading {
+    height: 18px;
+    transform: scale(5);
+    filter: drop-shadow(2px 2px 5px black);
+}
+
 /* Input & Prompt Section */
 .prompt-area {
     height: 15%;
@@ -132,6 +138,12 @@ body {
 
 .prompt-area button:hover {
     background: linear-gradient(145deg, #005FCC, #003E99);
+}
+
+.choose {
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
 }
 
 /* Responsive Design */
