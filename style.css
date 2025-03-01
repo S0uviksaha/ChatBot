@@ -84,9 +84,9 @@ body {
 }
 
 .user-image{
-    height: 40%;
-    width: 40%;
-    border-radius: 10px;
+    height: 50%;
+    width: 50%;
+    border-radius: 7px;
     margin-bottom: 5px;
 }
 
@@ -166,6 +166,7 @@ body {
 
     .user-chatbox, .ai-chatbox {
         max-width: 92%;
+        gap: 7px;
         padding: 5px;
     }
 
@@ -181,6 +182,11 @@ body {
     #user-image, #ai-image {
         width: 40px;
         height: 40px;
+    }
+
+    .user-image{
+        height: 80%;
+        width: 80%;
     }
 
     .prompt-area {
@@ -205,12 +211,13 @@ body {
     .chat-container {
         height: 80%;
         width: 95%;
-        gap: 10px;
+        gap: 7px;
         padding: 5px;
     }
 
     .user-chatbox, .ai-chatbox {
         max-width: 95%;
+        gap: 7px;
         padding: 5px;
     }
 
@@ -224,8 +231,13 @@ body {
     }
 
     #user-image, #ai-image {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .user-image{
+        height: 80%;
+        width: 80%;
     }
 
     .prompt-area {
