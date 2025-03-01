@@ -160,16 +160,17 @@ body {
     .chat-container {
         height: 80%;
         width: 95%;
-        gap: 15px;
+        gap: 12px;
+        padding: 7px;
     }
 
     .user-chatbox, .ai-chatbox {
-        max-width: 90%;
+        max-width: 92%;
         padding: 5px;
     }
 
     .user-chat-area, .ai-chat-area {
-        font-size: 22px;
+        font-size: 20px;
         padding: 10px;
     }
 
@@ -200,17 +201,18 @@ body {
     .chat-container {
         height: 80%;
         width: 95%;
-        gap: 15px;
+        gap: 10px;
+        padding: 5px;
     }
 
     .user-chatbox, .ai-chatbox {
-        max-width: 92%;
+        max-width: 95%;
         padding: 5px;
     }
 
     .user-chat-area, .ai-chat-area {
-        font-size: 22px;
-        padding: 10px;
+        font-size: 18px;
+        padding: 7px;
     }
 
     #user-image, #ai-image {
@@ -227,7 +229,7 @@ body {
     .prompt-area input {
         height: 45px;
         max-width: 80%;
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .prompt-area button {
