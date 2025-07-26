@@ -377,13 +377,13 @@ body::before {
     }
 
     .user-chat-area, .ai-chat-area {
-        font-size: 14px;
+        font-size: 15px;
         /* max-width: 100%; */
         padding: 7px;
     }
 
     .ai-chatbox, .user-chatbox{
-        max-width: 92%;
+        max-width: 94%;
     }
 
     #user-image, #ai-image {
@@ -401,7 +401,7 @@ body::before {
         width: 100%;
         padding: 5px;
         background: none;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .prompt-area input {
