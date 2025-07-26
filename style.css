@@ -383,12 +383,12 @@ body::before {
     }
 
     .ai-chatbox, .user-chatbox{
-        max-width: 98%;
+        max-width: 95%;
     }
 
     #user-image, #ai-image {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 
     .user-image{
@@ -397,7 +397,7 @@ body::before {
     }
 
     .prompt-area {
-        height: 15%;
+        height: 25%;
         width: 100%;
         /* padding: 5px; */
         background: none;
