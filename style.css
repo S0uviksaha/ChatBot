@@ -397,10 +397,11 @@ body::before {
     }
 
     .prompt-area {
-        height: 25%;
+        height: 15%;
         width: 100%;
-        /* padding: 5px; */
+        padding: 5px;
         background: none;
+        margin-bottom: 20px;
     }
 
     .prompt-area input {
