@@ -1,2 +1,2 @@
 # ChatBot
-AI chatbot using Html, CSS &amp; JavaScript.
+AI chatbot using Html, CSS &amp; JavaScript. 
