@@ -1,106 +1,248 @@
-* {
+/* CSS Custom Properties for consistent theming */
+:root {
+    /* Color Palette */
+    --primary-bg: #0f0f0f;
+    --secondary-bg: #1a1a1a;
+    --tertiary-bg: #262626;
+    --quaternary-bg: #333333;
+    
+    --primary-text: #ffffff;
+    --secondary-text: #e0e0e0;
+    --muted-text: #b3b3b3;
+    
+    --accent-primary: #007acc;
+    --accent-primary-hover: #005999;
+    --accent-secondary: #4a9eff;
+    
+    --user-message-bg: #1e3a8a;
+    --ai-message-bg: #374151;
+    
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-strong: rgba(0, 0, 0, 0.5);
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-full: 50%;
+    
+    /* Typography */
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-standard: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+}
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
-    background-color: #121212;
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+    color: var(--primary-text);
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 10px;
+    padding: var(--spacing-md);
+    position: relative;
+}
+
+/* Background decoration */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 122, 204, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(74, 158, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* Chat Container */
 .chat-container {
     height: 80%;
-    width: 90%;
-    /* max-width: 800px; */
-    margin-bottom: 5px;
-    padding: 10px;
-    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
-    border-radius: 15px;
+    width: min(900px, 90%);
+    max-width: 900px;
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    background: linear-gradient(145deg, var(--secondary-bg), var(--tertiary-bg));
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    overflow: auto;
+    gap: var(--spacing-lg);
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    backdrop-filter: blur(10px);
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) var(--tertiary-bg);
+}
+
+/* Custom Scrollbar */
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: var(--tertiary-bg);
+    border-radius: var(--radius-sm);
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: var(--radius-sm);
+    transition: background var(--transition-fast);
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary-hover);
 }
 
 /* Chat Boxes */
-.user-chatbox, .ai-chatbox {
+.user-chatbox, 
+.ai-chatbox {
     display: flex;
-    align-items: center;
-    max-width: 80%;
-    gap: 10px;
-    padding: 10px;
+    align-items: flex-start;
+    max-width: 85%;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    animation: slideIn 0.3s ease-out;
 }
 
 .user-chatbox {
     align-self: flex-end;
+    flex-direction: row-reverse;
 }
 
 .ai-chatbox {
     align-self: flex-start;
+    flex-direction: row;
 }
 
-/* Chat Areas */
-.user-chat-area, .ai-chat-area {
-    padding: 15px 20px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    font-size: 22px;
-    display: flex;
-    flex-direction: column-reverse;
+/* Slide-in animation for new messages */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Chat Message Areas */
+.user-chat-area, 
+.ai-chat-area {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
     word-wrap: break-word;
     max-width: 100%;
+    transition: all var(--transition-fast);
+    position: relative;
 }
 
 .user-chat-area {
-    background-color: #050b0fd7;
-    color: #ffffff;
-    border-radius: 20px 20px 0px 20px;
+    background: linear-gradient(135deg, var(--user-message-bg), #2563eb);
+    color: var(--primary-text);
+    border-radius: var(--radius-lg) var(--radius-lg) var(--radius-sm) var(--radius-lg);
+    margin-left: auto;
 }
 
 .ai-chat-area {
-    background-color: #303030;
-    color: #ffffff;
-    border-radius: 20px 20px 20px 0px;
+    background: linear-gradient(135deg, var(--ai-message-bg), #4b5563);
+    color: var(--primary-text);
+    border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) var(--radius-sm);
+    border: 1px solid var(--border-color);
 }
 
 /* Profile Images */
-#user-image, #ai-image {
+/* Profile Images */
+.user-image,
+.ai-image {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     object-fit: cover;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    border: 2px solid var(--border-color);
+    flex-shrink: 0;
+    transition: transform var(--transition-fast);
 }
 
-.user-image{
-    height: 50%;
-    width: 50%;
-    border-radius: 7px;
-    margin-bottom: 5px;
+#ai-image {
+    width: 150px;
+    height: 150px;
 }
 
+#user-image {
+    width: 100px;
+    height: 100px;
+}
+
+.user-image:hover,
+.ai-image:hover {
+    transform: scale(1.05);
+}
+
+/* Loading Animation */
 .loading {
+    width: 18px;
     height: 18px;
-    transform: scale(5);
-    filter: drop-shadow(2px 2px 5px black);
+    transform: scale(2);
+    filter: drop-shadow(2px 2px 5px var(--shadow-strong));
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(2);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(2.2);
+    }
 }
 
 /* Input & Prompt Section */
 .prompt-area {
     height: 15%;
-    width: 90%;
-    /* max-width: 800px; */
+    width: min(900px, 90%);
+    max-width: 900px;
     background-color: #1e1e1e;
     border-radius: 15px;
     display: flex;
@@ -150,9 +292,16 @@ body {
 }
 
 .choose {
-    height: 90%;
-    width: 90%;
+    height: 60%;
+    width: 60%;
     border-radius: 50%;
+}
+
+/* Button icons */
+#image-icon,
+.prompt-area button img {
+    height: 50%;
+    width: 50%;
 }
 
 /* Responsive Design */
@@ -180,8 +329,8 @@ body {
     }
 
     #user-image, #ai-image {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
     }
 
     .user-image{
@@ -204,6 +353,13 @@ body {
     .prompt-area button {
         height: 45px;
         width: 45px;
+    }
+
+    .choose,
+    #image-icon,
+    .prompt-area button img {
+        height: 50%;
+        width: 50%;
     }
 }
 
@@ -231,8 +387,8 @@ body {
     }
 
     #user-image, #ai-image {
-        width: 30px;
-        height: 30px;
+        width: 60px;
+        height: 60px;
     }
 
     .user-image{
@@ -255,5 +411,12 @@ body {
     .prompt-area button {
         height: 45px;
         width: 45px;
+    }
+
+    .choose,
+    #image-icon,
+    .prompt-area button img {
+        height: 45%;
+        width: 45%;
     }
 }
