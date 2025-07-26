@@ -364,31 +364,31 @@ body::before {
 }
 
 @media (max-width: 480px) {
-    .chat-container {
-        height: 80%;
-        width: 95%;
-        gap: 7px;
-        padding: 5px;
+    body {
+        margin: 0;
+        padding: 0;
     }
-
-    .user-chatbox, .ai-chatbox {
-        max-width: 95%;
-        gap: 7px;
-        padding: 5px;
+    .chat-container {
+        height: 100%;
+        width: 100%;
+        background: none;
+        margin: 0;
+        border: none;
     }
 
     .user-chat-area, .ai-chat-area {
-        font-size: 16px;
+        font-size: 14px;
+        /* max-width: 100%; */
         padding: 7px;
     }
 
-    .user-chatbox{
-        max-width: 60%;
+    .ai-chatbox, .user-chatbox{
+        max-width: 98%;
     }
 
     #user-image, #ai-image {
-        width: 60px;
-        height: 60px;
+        width: 20px;
+        height: 20px;
     }
 
     .user-image{
@@ -398,8 +398,9 @@ body::before {
 
     .prompt-area {
         height: 15%;
-        width: 95%;
-        padding: 5px;
+        width: 100%;
+        /* padding: 5px; */
+        background: none;
     }
 
     .prompt-area input {
