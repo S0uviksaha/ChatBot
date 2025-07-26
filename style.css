@@ -367,9 +367,10 @@ body::before {
     body {
         margin: 0;
         padding: 0;
+        height: 92vh;
     }
     .chat-container {
-        height: 100%;
+        height: 85%;
         width: 100%;
         background: none;
         margin: 0;
@@ -397,11 +398,10 @@ body::before {
     }
 
     .prompt-area {
-        height: 12%;
+        height: 15%;
         width: 100%;
         padding: 10px;
         background: none;
-        margin-bottom: 50px;
     }
 
     .prompt-area input {
