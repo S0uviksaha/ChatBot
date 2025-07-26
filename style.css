@@ -401,7 +401,7 @@ body::before {
         width: 100%;
         padding: 5px;
         background: none;
-        margin-bottom: 20px;
+        margin-bottom: 200px;
     }
 
     .prompt-area input {
