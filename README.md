@@ -3,7 +3,7 @@
 A sleek, responsive, and modern frontend for an AI chatbot built using **HTML**, **CSS**, and **JavaScript**.  
 This project simulates chat-based interaction with AI and supports image input with live preview.
 
-> 👉 Link - https://s0uviksaha.github.io/ChatBot/
+> 👉 https://s0uviksaha.github.io/ChatBot/
 
 ## 🚀 Features
 
